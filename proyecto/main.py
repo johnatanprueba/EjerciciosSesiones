@@ -5,11 +5,12 @@ import moduloCuentas
 opt = menu.menuPrincipal()
 while(opt!=5):
     if opt == 1:
-        numeroDoc,nombre = menu.menuCrearCuenta()
-        moduloCuentas.crearCuenta(numeroDoc,nombre)
+        numeroDoc,nombre,contrasenia = menu.menuCrearCuenta()
+        moduloCuentas.crearCuenta(numeroDoc,nombre,contrasenia)
 
     if(opt == 2):
-        print("consignar dinero")
+        idCuenta,valor = menu.menuConsignarDinero()
+        moduloCuentas.consignarDinero(idCuenta,valor)
     if(opt == 3):
         print("Retirar dinero")
     if(opt == 4):
