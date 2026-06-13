@@ -1,0 +1,20 @@
+[
+    {
+        "numeroDoc": "1233",
+        "nombre": "john",
+        "id": 1,
+        "password": "1233john"
+    },
+    {
+        "numeroDoc": "34545",
+        "nombre": "diana",
+        "id": 2,
+        "password": "34545diana"
+    },
+    {
+        "numeroDoc": "89878",
+        "nombre": "ggg",
+        "id": 3,
+        "password": "89878ggg"
+    }
+]

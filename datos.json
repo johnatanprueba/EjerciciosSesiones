@@ -1,0 +1,15 @@
+{
+    "nombre": "Susana",
+    "edad": 26,
+    "ciudad": "Colombia",
+    "materias": [
+        {
+            "nombreMateria": "matematicas",
+            "calificacion": 3.5
+        },
+        {
+            "nombreMateria": "biologia",
+            "calificacion": 4.5
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+from csv import writer
+
+myData = [
+    ["firstName","SecondName", "Grade"],
+    ["Alex","Godoy","2"],
+    ["Carlos","De la Torre","2"],
+]
+
+myFile = open("persons.csv","w", newline='')
+
+with myFile:
+    escritor = writer(myFile)
+    escritor.writerows(myData)

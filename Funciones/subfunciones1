@@ -1,0 +1,16 @@
+def outer_function(x):       # funcion externa recibe el valor de x
+    def inner_function(y):   # funcion interna recibe el valor de y
+        return x + y
+    return inner_function
+
+
+add_10 = outer_function(10)
+result = add_10(5)
+print(result)               # Output: 15
+print(add_10(500))          # Output: 510
+
+
+add_100 = outer_function(100)
+result = add_100(5)
+print(result)               # Output: 105
+print(add_100(5000))         # Output: 5100
