@@ -1,0 +1,62 @@
+[
+    {
+        "idCuenta": 1,
+        "tipoTransaccion": "Consignacion",
+        "monto": 1000000.0,
+        "fecha": "2026-06-13 13:23:23"
+    },
+    {
+        "idCuenta": 1,
+        "tipoTransaccion": "Consignacion",
+        "monto": 500000.0,
+        "fecha": "2026-06-13 13:23:55"
+    },
+    {
+        "idCuenta": 1,
+        "tipoTransaccion": "Consignacion",
+        "monto": 500000.0,
+        "fecha": "2026-06-13 13:28:06"
+    },
+    {
+        "idCuenta": 2,
+        "tipoTransaccion": "Consignacion",
+        "monto": 350000.0,
+        "fecha": "2026-06-13 13:29:10"
+    },
+    {
+        "idCuenta": 1,
+        "tipoTransaccion": "Consignacion",
+        "monto": 23000.0,
+        "fecha": "2026-06-13 13:56:05"
+    },
+    {
+        "idCuenta": 1,
+        "tipoTransaccion": "Retiro",
+        "monto": 2333.0,
+        "fecha": "2026-06-13 13:56:50"
+    },
+    {
+        "idCuenta": 1,
+        "tipoTransaccion": "Retiro",
+        "monto": 1.0,
+        "fecha": "2026-06-13 13:58:51"
+    },
+    {
+        "idCuenta": 1,
+        "tipoTransaccion": "Retiro",
+        "monto": 12000.0,
+        "fecha": "2026-06-13 14:02:27"
+    },
+    {
+        "idCuenta": 2,
+        "tipoTransaccion": "Consignacion",
+        "monto": 123444.0,
+        "fecha": "2026-06-13 14:18:38"
+    },
+    {
+        "idCuenta": 2,
+        "tipoTransaccion": "Retiro",
+        "monto": 73444.0,
+        "fecha": "2026-06-13 14:19:27"
+    }
+]

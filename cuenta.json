@@ -1,20 +1,16 @@
 [
     {
-        "numeroDoc": "1233",
-        "nombre": "john",
-        "id": 1,
-        "password": "1233john"
+        "numeroDoc": "1095923236",
+        "nombre": "johnatan naranjo",
+        "password": "JOhnar02$",
+        "saldo": 2008666.0,
+        "id": 1
     },
     {
-        "numeroDoc": "34545",
-        "nombre": "diana",
-        "id": 2,
-        "password": "34545diana"
-    },
-    {
-        "numeroDoc": "89878",
-        "nombre": "ggg",
-        "id": 3,
-        "password": "89878ggg"
+        "numeroDoc": "10989755",
+        "nombre": "LIlian",
+        "password": "123$",
+        "saldo": 400000.0,
+        "id": 2
     }
 ]

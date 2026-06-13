@@ -8,6 +8,6 @@ def getMaxIdListaCuenta(listCuentas):
 def generatePassword(dtoCuenta):
     return dtoCuenta["numeroDoc"]+dtoCuenta["nombre"]
 
-def mostrarTRansaccion(monto,tipoTransaccion):
-    print(f"Se ha realizado una transaccion de tipo {tipoTransaccion} por un monto de {monto}")
+def mostrarTRansaccion(idCuenta,tipoTransaccion,monto):
+    print(f"Se ha realizado una transaccion de tipo {tipoTransaccion} por un monto de {monto} en la cuenta con id {idCuenta}")
 
