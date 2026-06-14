@@ -84,7 +84,7 @@ def menuRetirarDinero(idCuenta):
 def menuLogueo():
     idCuenta = None
     while True:
-        idCuenta = int(input("Digite el id de la cuenta a la que desea realizar la transacción\n"))
+        idCuenta = int(input("Digite el id de la cuenta a la que desea realizar la transacción \n"))
         contrasenia = input("Digite contraseña\n")
         cuenta = moduloCuentas.getCuentaById(idCuenta)
         if cuenta is not None and cuenta.get("password") == contrasenia:
