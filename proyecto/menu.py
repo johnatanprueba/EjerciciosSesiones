@@ -1,10 +1,22 @@
 import moduloCuentas
+import moduloUtil
 
 menu = "1.Crear cuenta bancaria\n"
 menu+= "2.Consignar dinero a una cuenta\n"
 menu+= "3.Retirar dinero\n"
 menu+= "4.Pagar servicios\n"
 menu+= "5.Mostar movimientos bancarios\n"
+menu+= "0.Salir\n"
+
+menuServicios = "1.Energia\n"
+menuServicios+= "2.Agua\n"
+menuServicios+= "3.Gas\n"
+
+dicServ = {
+    "Energia":24000,
+    "Agua":35000,  
+    "Gas":50000
+}
 
 def menuPrincipal():
     opt = int(input(menu))
@@ -72,7 +84,7 @@ def menuRetirarDinero(idCuenta):
 def menuLogueo():
     idCuenta = None
     while True:
-        idCuenta = int(input("Digite el id de la cuenta a la que desea retirar\n"))
+        idCuenta = int(input("Digite el id de la cuenta a la que desea realizar la transacción\n"))
         contrasenia = input("Digite contraseña\n")
         cuenta = moduloCuentas.getCuentaById(idCuenta)
         if cuenta is not None and cuenta.get("password") == contrasenia:
@@ -86,3 +98,46 @@ def menuLogueo():
                 idCuenta = None              
                 break
     return idCuenta 
+
+def menuPagarServicios(idCuenta):
+    valorServicio = None
+    strServicio = None
+    cuenta = moduloCuentas.getCuentaById(idCuenta)
+    while True:
+        opt = int(input(menuServicios))
+        if opt == 1:
+            print("Ha seleccionado pagar energia")
+            valorServicio = dicServ.get("Energia")
+            strServicio = "Energia"
+        elif opt == 2:
+            print("Ha seleccionado pagar agua")
+            valorServicio = dicServ.get("Agua")
+            strServicio = "Agua"
+        elif opt == 3:
+            print("Ha seleccionado pagar gas")
+            valorServicio = dicServ.get("Gas")
+            strServicio = "Gas"
+        else:
+            print("Opcion no valida")
+            sel = input("Desea volver a seleccionar el servicio? S/N\n")
+            if sel.upper() == "S":
+                continue
+            else:
+                valorServicio = None
+                strServicio = None
+                break
+
+        if valorServicio > cuenta.get("saldo",0):
+            print("El valor del servicio no puede ser mayor al saldo de la cuenta")
+            sel = input("Desea volver a seleccionar el servicio? S/N\n")
+            if sel.upper() == "S":
+                continue
+            else:
+                valorServicio = None
+                strServicio = None
+                break
+        else:
+            break
+    return valorServicio,strServicio
+
+

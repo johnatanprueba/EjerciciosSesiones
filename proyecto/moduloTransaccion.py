@@ -15,3 +15,14 @@ def crearTransaccion(idCuenta,tipoTransaccion,monto,fecha):
     listaTransacciones.append(dtoTransaccion)
     with open("transaccion.json","w") as archivoTransaccion:
         archivoTransaccion = json.dump(listaTransacciones,archivoTransaccion,indent=4)
+
+def getTransaccionesByIdCuenta(idCuenta):
+    listaTransacciones = getTransacciones()
+    listaTransaccionesCuenta = []
+    for transaccion in listaTransacciones:
+        if transaccion["idCuenta"] == idCuenta:
+            listaTransaccionesCuenta.append(transaccion)
+    
+    if len(listaTransaccionesCuenta) > 0:
+        listaTransaccionesCuenta.sort(key=lambda x: x["fecha"],reverse=True)
+    return listaTransaccionesCuenta

@@ -29,7 +29,7 @@ def consignarDinero(idCuenta,valor):
             break
     with open("cuenta.json","w") as archivoCuenta:
         archivoCuenta = json.dump(listaCuentas,archivoCuenta,indent=4)
-    moduloUtil.mostrarTRansaccion(valor,"Consignacion",valor)
+    moduloUtil.mostrarTRansaccion(idCuenta,"Consignacion",valor)
     fecha = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     moduloTransaccion.crearTransaccion(idCuenta,"Consignacion",valor,fecha)
 
@@ -41,7 +41,7 @@ def retirarDinero(idCuenta,valor):
             break
     with open("cuenta.json","w") as archivoCuenta:
         archivoCuenta = json.dump(listaCuentas,archivoCuenta,indent=4)
-    moduloUtil.mostrarTRansaccion(valor,"Retiro",valor)
+    moduloUtil.mostrarTRansaccion(idCuenta,"Retiro",valor)
     fecha = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     moduloTransaccion.crearTransaccion(idCuenta,"Retiro",valor,fecha)
 
@@ -51,4 +51,17 @@ def getCuentaById(idCuenta):
         if cuenta["id"] == idCuenta:
             return cuenta
     return None
+
+def pagarServicio(idCuenta,valorServicio,strServicio):
+    listaCuentas = getListaCuentas()
+    for cuenta in listaCuentas:
+        if cuenta["id"] == idCuenta:
+            cuenta["saldo"] = cuenta.get("saldo",0) - valorServicio
+            break
+    with open("cuenta.json","w") as archivoCuenta:
+        archivoCuenta = json.dump(listaCuentas,archivoCuenta,indent=4)
+    moduloUtil.mostrarTRansaccion(idCuenta,"Pago Servicio "+strServicio,valorServicio)
+    fecha = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    moduloTransaccion.crearTransaccion(idCuenta,"Pago Servicio " + strServicio,valorServicio,fecha)
+
     

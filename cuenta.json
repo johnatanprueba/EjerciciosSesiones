@@ -1,16 +1,16 @@
 [
     {
         "numeroDoc": "1095923236",
-        "nombre": "johnatan naranjo",
-        "password": "JOhnar02$",
-        "saldo": 2008666.0,
+        "nombre": "JOhnatan Naranjo Acevedo",
+        "password": "1234",
+        "saldo": 939000.0,
         "id": 1
     },
     {
-        "numeroDoc": "10989755",
-        "nombre": "LIlian",
-        "password": "123$",
-        "saldo": 400000.0,
+        "numeroDoc": "1095923333",
+        "nombre": "Diana Patricia Naranjo Aveved",
+        "password": "12",
+        "saldo": 1700000.0,
         "id": 2
     }
 ]
